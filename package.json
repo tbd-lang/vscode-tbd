@@ -1,30 +1,35 @@
 {
-  "name": "tbd-vscode",
-  "displayName": "tbd",
-  "description": "Syntax highlighting for the tbd language",
-  "version": "0.0.1",
-  "publisher": "tbd-lang",
-  "engines": {
-    "vscode": "^1.75.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "contributes": {
-    "languages": [
-      {
-        "id": "tbd",
-        "aliases": ["tbd", "TBD"],
-        "extensions": [".tbd"],
-        "configuration": "./language-configuration.json"
-      }
+    "name": "tbd",
+    "displayName": "tbd",
+    "description": "Syntax highlighting for the tbd language",
+    "version": "0.0.1",
+    "publisher": "tbd-lang",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages"
     ],
-    "grammars": [
-      {
-        "language": "tbd",
-        "scopeName": "source.tbd",
-        "path": "./syntaxes/tbd.tmLanguage.json"
-      }
-    ]
-  }
+    "contributes": {
+        "languages": [
+            {
+                "id": "tbd",
+                "aliases": [
+                    "tbd",
+                    "TBD"
+                ],
+                "extensions": [
+                    ".tbd"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "tbd",
+                "scopeName": "source.tbd",
+                "path": "./syntaxes/tbd.tmLanguage.json"
+            }
+        ]
+    }
 }
