@@ -61,10 +61,11 @@
       }
     },
     "function-declaration": {
-      "match": "\\b(function|external)\\s+([a-z_][A-Za-z0-9_']*)",
+      "match": "\\b(public\\s+)?(function|external)\\s+([a-z_][A-Za-z0-9_']*)",
       "captures": {
         "1": { "name": "keyword.declaration.function.tbd" },
-        "2": { "name": "entity.name.function.tbd" }
+        "2": { "name": "keyword.declaration.function.tbd" },
+        "3": { "name": "entity.name.function.tbd" }
       }
     },
     "named-field": {
