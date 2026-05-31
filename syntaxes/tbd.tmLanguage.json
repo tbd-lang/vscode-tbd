@@ -82,7 +82,7 @@
         },
         {
           "name": "keyword.control.tbd",
-          "match": "\\b(match|let|in|fun|end|when|as|receive|send|spawn)\\b"
+          "match": "\\b(match|let|in|fun|end|when|as|receive|send|spawn|self)\\b"
         }
       ]
     },
