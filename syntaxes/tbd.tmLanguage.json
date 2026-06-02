@@ -18,7 +18,8 @@
     { "include": "#numbers" },
     { "include": "#function-call" },
     { "include": "#operators" },
-    { "include": "#punctuation" }
+    { "include": "#punctuation" },
+    { "include": "#characters" }
   ],
   "repository": {
     "comments": {
@@ -107,6 +108,10 @@
     "numbers": {
       "name": "constant.numeric.tbd",
       "match": "\\b[0-9]+\\b"
+    },
+    "characters": {
+      "name": "string.quoted.single.tbd",
+      "match": "'[\\s\\S]'"
     },
     "function-call": {
       "match": "\\b([a-z_][A-Za-z0-9_']*)\\s*(?=\\()",
