@@ -11,6 +11,7 @@
     { "include": "#function-declaration" },
     { "include": "#named-field" },
     { "include": "#keywords" },
+    { "include": "#booleans" },
     { "include": "#builtin-types" },
     { "include": "#type-variables" },
     { "include": "#module-access" },
@@ -62,7 +63,7 @@
       }
     },
     "function-declaration": {
-      "match": "\\b(public\\s+)?(function|external)\\s+([a-z_][A-Za-z0-9_']*)",
+      "match": "\\b(pub\\s+)?(fun|extern)\\s+([a-z_][A-Za-z0-9_']*)",
       "captures": {
         "1": { "name": "keyword.declaration.function.tbd" },
         "2": { "name": "keyword.declaration.function.tbd" },
@@ -83,9 +84,13 @@
         },
         {
           "name": "keyword.control.tbd",
-          "match": "\\b(match|let|in|fun|end|when|as|receive|send|spawn|self)\\b"
+          "match": "\\b(fun|extern|pub|match|let|in|and|then|fun|end|when|is|as|receive|send|spawn|self)\\b"
         }
       ]
+    },
+    "booleans": {
+      "name": "constant.language.boolean.tbd",
+      "match": "\\b(true|false)\\b"
     },
     "builtin-types": {
       "name": "support.type.tbd",
@@ -102,8 +107,8 @@
       }
     },
     "constructors": {
-      "name": "entity.name.type.constructor.tbd",
-      "match": "[A-Z][A-Za-z0-9_]*"
+      "name": "variable.other.enummember.tbd",
+      "match": "[A-Z][A-Za-z0-9_]*(?!\\.)"
     },
     "numbers": {
       "name": "constant.numeric.tbd",
@@ -140,7 +145,8 @@
       "patterns": [
         { "name": "punctuation.separator.tbd", "match": "[,;:]" },
         { "name": "punctuation.section.parens.tbd", "match": "[()]" },
-        { "name": "punctuation.section.brackets.tbd", "match": "[\\[\\]]" }
+        { "name": "punctuation.section.brackets.tbd", "match": "[\\[\\]]" },
+        { "name": "punctuation.section.braces.tbd", "match": "[{}]" }
       ]
     }
   }
