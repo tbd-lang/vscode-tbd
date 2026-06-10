@@ -86,7 +86,7 @@
         },
         {
           "name": "keyword.control.tbd",
-          "match": "\\b(fun|extern|pub|match|let|in|and|then|fun|end|when|is|as|receive|send|spawn|self)\\b"
+          "match": "\\b(fun|extern|pub|match|with|let|in|then|end|when|as|receive|send|spawn|self)\\b"
         }
       ]
     },
