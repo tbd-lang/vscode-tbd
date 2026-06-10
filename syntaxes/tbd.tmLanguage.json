@@ -14,7 +14,9 @@
     { "include": "#booleans" },
     { "include": "#builtin-types" },
     { "include": "#type-variables" },
+    { "include": "#qualified-path" },
     { "include": "#module-access" },
+    { "include": "#module-namespace" },
     { "include": "#constructors" },
     { "include": "#numbers" },
     { "include": "#function-call" },
@@ -100,7 +102,20 @@
       "name": "variable.parameter.type.tbd",
       "match": "\\$[a-z_][A-Za-z0-9_]*"
     },
+    "qualified-path": {
+      "match": "\\b([a-z_][A-Za-z0-9_]*)(?=(?:\\.[a-z_][A-Za-z0-9_]*)*\\.[A-Z])",
+      "captures": {
+        "1": { "name": "entity.name.namespace.tbd" }
+      }
+    },
     "module-access": {
+      "match": "\\b([A-Z][A-Za-z0-9_]*)\\.([a-z_][A-Za-z0-9_']*)",
+      "captures": {
+        "1": { "name": "entity.name.namespace.tbd" },
+        "2": { "name": "entity.name.function.tbd" }
+      }
+    },
+    "module-namespace": {
       "match": "\\b([A-Z][A-Za-z0-9_]*)(?=\\.)",
       "captures": {
         "1": { "name": "entity.name.namespace.tbd" }
