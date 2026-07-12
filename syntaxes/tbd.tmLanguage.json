@@ -92,7 +92,7 @@
 
     "keyword": {
       "name": "keyword",
-      "match": "\\b(?:if|function|let|match)\\b"
+      "match": "\\b(?:if|function|let|match|import|fun)\\b"
     },
 
     "atom": {
